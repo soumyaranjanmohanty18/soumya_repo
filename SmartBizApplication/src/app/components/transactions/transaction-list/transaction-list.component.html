@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h3 class="mb-3">Transaction List</h3>
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>ID</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Date</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of transactions">
+        <td>{{ t.id }}</td>
+        <td>{{ t.customerName }}</td>
+        <td>{{ t.productName }}</td>
+        <td>{{ t.date | date:'shortDate' }}</td>
+        <td>{{ t.amount | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
